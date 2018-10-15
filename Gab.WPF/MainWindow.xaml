@@ -1,0 +1,25 @@
+﻿<Window x:Class="Gab.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gab.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Login To Gab" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="150" Click="Button_Click" Margin="8"/>
+        
+        <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Grid.Column="1" VerticalAlignment="Top" Margin="0,30,0,0">
+            <Image x:Name="Avatar" HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="200" Margin="0,0,0,0" Stretch="UniformToFill" Source="/Assets/frog.jpg"/>
+            <TextBlock x:Name="UserName" FontSize="24" HorizontalAlignment="Center" Margin="0,16,0,4" Text="Not Logged In" FontWeight="Bold" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Name" FontSize="24" HorizontalAlignment="Center" Margin="0,16,0,4" FontWeight="Bold"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
