@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace Gab.Models
 {
     public class Feed
     {
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         [JsonProperty("published_at")]
         public string PublishedAt { get; set; }

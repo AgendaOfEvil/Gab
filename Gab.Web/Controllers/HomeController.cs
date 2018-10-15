@@ -23,20 +23,3 @@ namespace Gab.Web.Controllers
         }
     }
 }
-
-
-        //public async Task<IActionResult> About()
-        //{
-        //    var user = await gab.UserDetails();
-
-        //    ViewData["Message"] = "Your application description page.";
-
-        //    return View();
-        //}
-
-        //public IActionResult Contact()
-        //{
-        //    ViewData["Message"] = "Your contact page.";
-
-        //    return View();
-        //}

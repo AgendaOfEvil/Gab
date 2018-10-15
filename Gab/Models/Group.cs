@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Gab.Converters;
 using Newtonsoft.Json;
 
@@ -7,7 +8,7 @@ namespace Gab.Models
     public class Group
     {
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         [JsonProperty("title")]
         public string Title { get; set; }

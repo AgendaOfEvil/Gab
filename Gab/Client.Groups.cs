@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Gab.Models;
@@ -16,7 +17,7 @@ namespace Gab
             return JsonConvert.DeserializeObject<Response<List<Group>>>(json, _serializer);
         }
 
-        public async Task<GroupExt> GroupDetails(string groupId)
+        public async Task<GroupExt> GroupDetails(Guid groupId)
         {
             var url = $"https://api.gab.com/v1.0/groups/{groupId}";
 
@@ -25,7 +26,7 @@ namespace Gab
             return JsonConvert.DeserializeObject<GroupExt>(json, _serializer);
         }
 
-        public async Task<Response<List<User>>> GroupUsers(string groupId, int before = 0)
+        public async Task<Response<List<User>>> GroupUsers(Guid groupId, int before = 0)
         {
             var url = $"https://api.gab.com/v1.0/groups/{groupId}/users?before={before}";
 
@@ -34,7 +35,7 @@ namespace Gab
             return JsonConvert.DeserializeObject<Response<List<User>>>(json, _serializer);
         }
 
-        public async Task<object> GroupModerationLogs(string groupId)
+        public async Task<object> GroupModerationLogs(Guid groupId)
         {
             // TODO: Find out the what this needs - GroupModerationLogs
 

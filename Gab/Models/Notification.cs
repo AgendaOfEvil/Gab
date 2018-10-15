@@ -5,7 +5,7 @@ namespace Gab.Models
     public class Notification
     {
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public long Id { get; set; }
 
         [JsonProperty("created_at")]
         public string CreatedAt { get; set; }
