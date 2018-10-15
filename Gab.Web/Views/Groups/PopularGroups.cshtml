@@ -1,0 +1,62 @@
+﻿@model Response<List<Group>>
+
+@{
+    ViewData["Title"] = "";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-sm table-striped">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].PinnedPostId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].CoverUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].IsPrivate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].IsJoined)
+        </th> 
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Data) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinnedPostId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoverUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPrivate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsJoined)
+            </td> 
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+﻿@model  Response<List<Feed>>
+
+@{
+    ViewData["Title"] = "Feeds";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].PublishedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Type)
+            </th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublishedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td> 
+            </tr>
+        }
+    </tbody>
+</table>

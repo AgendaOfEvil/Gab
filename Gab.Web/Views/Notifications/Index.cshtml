@@ -1,0 +1,58 @@
+﻿@model Response<List<Notification>>
+
+@{
+    ViewData["Title"] = "Notifications";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].Read)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Read)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 
